@@ -30,9 +30,9 @@ Another application of this method is to scale up an image in image processing. 
 
 ## Polynomial Interpolation
 
-**Polynomial interpolation** is an interpolation method that estimates values in-between known data points by finding a polynomial function that goes through known data points. For a set of _n + 1_ known points (_xi, yi_) where no two _xi_ are the same, there exists one polynomial function of degree _n_ or lower that passes through all the known points. Polynomial interpolation is commonly used for interpolation because polynomials are easy to evaluate, differentiate, and integrate relative to other choices such as trigonometric and exponential series.
+**Polynomial interpolation** is an interpolation method that estimates values in-between known data points by finding a polynomial function that goes through known data points. For a set of _n + 1_ known points (_x<sub>i</sub>, y<sub>i</sub>_) where no two _x<sub>i</sub>_ are the same, there exists one polynomial function of degree _n_ or lower that passes through all the known points. Polynomial interpolation is commonly used for interpolation because polynomials are easy to evaluate, differentiate, and integrate relative to other choices such as trigonometric and exponential series.
 
-| <img src="images/polynomial_interpolation/polynomial_interpolation.png" alt = "polynomial interpolation"/> |
+| <img src="images/polynomial_interpolation/polynomial_interpolation.png" width = "425" alt = "polynomial interpolation"/> |
 | --- |
 | Polynomial interpolation (blue curves). [3] |
 
@@ -46,11 +46,13 @@ By substituting the given data points into the equation, we will get a system of
 
 ![equation 2](images/polynomial_interpolation/equation_2.png)
 
-By solving this system for _ak_, we will get tbe interpolant (polynomial function) that goes through all the given point. One of the method that can be used to solve this system of equations is Gaussian elimination.
+By solving this system for _a<sub>k</sub>_, we will get the interpolant (polynomial function) that goes through all the given point. One of the method that can be used to solve this system of equations is Gaussian elimination.
 
 Other than the direct method, methods that are commonly used to construct polynomial interpolation are Newton's divided difference polynomial method (Newton form) and the Langrangian interpolation method. These two methods are better than the direct method in terms of calculation speed and complexity of the calculation.
 
-The application of polynomial interpolation is to approximate complicated curves, for example, the shapes of letters in typography, evaluate natural logarithm, or evalute trigonometric functions. It is also used to perform sub-quadratic multiplication and squaring such as Karatsuba multiplication and Toom-Cook multiplication because it has a faster computation time. But, there is a problem in using polynomial interpolation. The problem is that the resulting graph might not reflect the actual problem. It is possible that the polynomial function, although accurate at the given points, will differ from the true values at some regions between the given data points when there are "spikes" in the graph, reflecting the unexpected events in a real-world situation. Other problem is the Runge's phenomenon that shows for high values of _n_ (degree), the polynomial interpolation may oscillate wildy between the given data points.
+The application of polynomial interpolation is to approximate complicated curves, for example, the shapes of letters in typography, evaluate natural logarithm, or evalute trigonometric functions. It is also used to perform sub-quadratic multiplication and squaring such as Karatsuba multiplication and Toom-Cook multiplication because it has a faster computation time. 
+
+But, there is a problem in using polynomial interpolation. The problem is that the resulting graph might not reflect the actual problem. It is possible that the polynomial function, although accurate at the given points, will differ from the true values at some regions between the given data points when there are "spikes" in the graph, reflecting the unexpected events in a real-world situation. Other problem is the Runge's phenomenon that shows for high values of _n_ (degree), the polynomial interpolation may oscillate wildy between the given data points.
 
 ## Linear Interpolation
 
