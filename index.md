@@ -16,7 +16,15 @@ There are a lot of interpolation methods that can be used to estimate data point
 
 Although this method is unlikely to be used in simple problems because there are other methods that are almost as simple to implement but overall better than this method, this method is a favourable choice over the other methods in high-dimensional multivariate interpolation (interpolation in functions that contain more than one variable) because of its speed and simplicity. This method is commonly used in real-time 3D rendering to select color values for a textured surface. 
 
+| <img src="images/nearest_neighbour_interpolation/nearest_neighbour_interpolation.png" width="425" alt = "nearest-neighbour interpolation"/> | <img src="images/nearest_neighbour_interpolation/nearest_neighbour_interpolation_on_uniform_2D_grid.png" width="425" alt = "nearest-neighbour interpolation on uniform 2D grid"/> | <img src="images/nearest_neighbour_interpolation/nearest_neighbour_interpolation_on_random_points_2D.png" width="425" alt = "nearest-neighbour interpolation on random points 2D"/> |
+| --- | --- | --- |
+| Nearest-neighbour interpolation (blue lines) in one dimension. [1] | Nearest neighbor interpolation on a uniform 2D grid (black points). [1] | Nearest neighbor interpolation of a random set of points (black dots) in 2D. [1] |
+
 Another application of this method is to scale up an image in image processing. But there is a major drawback in using this method for image processing. It tends to generate images of poor quality.
+
+| <img src="images/nearest_neighbour_interpolation/x.png" alt = "original image 1"/> | <img src="images/nearest_neighbour_interpolation/trees.jpg" alt = "original image 2"/> | <img src="images/nearest_neighbour_interpolation/upscaled_images.png" width="425" alt = "upscaled images"/> |
+| --- | --- | --- |
+| Small image of an 'X'. [2] | Small image of trees. [2] | Upscaled images of an 'X' and trees. [2] |
 
 ## Polynomial Interpolation
 
@@ -55,3 +63,7 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+## References
+[1] https://en.wikipedia.org/w/index.php?title=Nearest-neighbor_interpolation. Accessed on 25th May 2017, 15.00 WIB. <br>
+[2] https://www.giassa.net/?page_id=207. Accessed on 25th May 2017, 15.30 WIB.
