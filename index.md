@@ -1,6 +1,8 @@
+# Interpolation Methods
+
 ## What is Interpolation?
 
-In engineering and science, it is often required to estimate data points in-between a given discrete set of data points that is obtained from sampling and experiment. The method to estimate or construct these new data points is called **interpolation**. **Interpolation** derives a function from a set of discrete data points that passes through all the given data points. The function derived from interpolation depends on the interpolation methods used. 
+Many times, especially in engineering and science, data is given only at discrete points and it is often required to estimate data points in-between the given discrete data points. The method to estimate or construct these new data points is called **interpolation**. **Interpolation** derives a function from a set of discrete data points that passes through all the given data points. The function derived from interpolation depends on the interpolation methods used. 
 
 In addition to estimate data points, interpolation is also used to approximate a complicated function by a simple function. The simple function can be obtained by making an interpolation from a few data points evaluated from the original function. Although this simple function have interpolation errors, depending on the problem domain and the interpolation method used, the gain in simplicity may be better than the loss in precision from errors.
 
@@ -27,6 +29,28 @@ Another application of this method is to scale up an image in image processing. 
 | Small image of an 'X'. [2] | Small image of trees. [2] | Upscaled images of an 'X' and trees. [2] |
 
 ## Polynomial Interpolation
+
+**Polynomial interpolation** is an interpolation method that estimates values in-between known data points by finding a polynomial function that goes through known data points. For a set of _n + 1_ known points (_xi, yi_) where no two _xi_ are the same, there exists one polynomial function of degree _n_ or lower that passes through all the known points. Polynomial interpolation is commonly used for interpolation because polynomials are easy to evaluate, differentiate, and integrate relative to other choices such as trigonometric and exponential series.
+
+| <img src="images/polynomial_interpolation/polynomial_interpolation.png" alt = "polynomial interpolation"/> |
+| --- |
+| Polynomial interpolation (blue curves). [3] |
+
+There are several ways/methods to construct polynomial interpolation from a given set of data points. The simplest method is the direct method that construct the polynomial interpolation by solving the system of linear equations created from the given set of data points. It is not necessary to use all the given data points. The data points that are used to create the interpolation are data points that are closest to the value that is going to be estimated and the number of chosen data points is based on the order of the polynomial used to interpolates the given data points.
+
+Suppose there are _n + 1_ data points and these data points are going to be interpolated by polynomial of degree _n_. The polynomial interpolation is in the form
+
+![equation 1](images/polynomial_interpolation/equation_1.png)
+
+By substituting the given data points into the equation, we will get a system of linear equations that can be represented as a matrix-vector form
+
+![equation 2](images/polynomial_interpolation/equation_2.png)
+
+By solving this system for _ak_, we will get tbe interpolant (polynomial function) that goes through all the given point. One of the method that can be used to solve this system of equations is Gaussian elimination.
+
+Other than the direct method, methods that are commonly used to construct polynomial interpolation are Newton's divided difference polynomial method (Newton form) and the Langrangian interpolation method. These two methods are better than the direct method in terms of calculation speed and complexity of the calculation.
+
+The application of polynomial interpolation is to approximate complicated curves, for example, the shapes of letters in typography, evaluate natural logarithm, or evalute trigonometric functions. It is also used to perform sub-quadratic multiplication and squaring such as Karatsuba multiplication and Toom-Cook multiplication because it has a faster computation time. But, there is a problem in using polynomial interpolation. The problem is that the resulting graph might not reflect the actual problem. It is possible that the polynomial function, although accurate at the given points, will differ from the true values at some regions between the given data points when there are "spikes" in the graph, reflecting the unexpected events in a real-world situation. Other problem is the Runge's phenomenon that shows for high values of _n_ (degree), the polynomial interpolation may oscillate wildy between the given data points.
 
 ## Linear Interpolation
 
@@ -66,4 +90,7 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 ## References
 [1] https://en.wikipedia.org/w/index.php?title=Nearest-neighbor_interpolation. Accessed on 25th May 2017, 15.00 WIB. <br>
-[2] https://www.giassa.net/?page_id=207. Accessed on 25th May 2017, 15.30 WIB.
+[2] https://www.giassa.net/?page_id=207. Accessed on 25th May 2017, 15.30 WIB. <br>
+[3] https://en.wikipedia.org/wiki/Polynomial_interpolation. Accessed on 25th May 2017, 17.30 WIB. <br>
+[4] http://whatis.techtarget.com/definition/polynomial-interpolation. Accessed on 25th May 2017, 17.35 WIB. <br>
+[5] w3.gazi.edu.tr/~balbasi/mws_gen_inp_txt_direct.pdf. Accessed on 25th May 2017, 17.50 WIB. <br>
