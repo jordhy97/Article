@@ -1,8 +1,28 @@
-## Welcome to GitHub Pages
+## What is Interpolation?
 
-You can use the [editor on GitHub](https://github.com/jordhy97/Article/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+In engineering and science, it is often required to estimate data points in-between a given discrete set of data points that is obtained from sampling and experiment. The method to estimate or construct these new data points is called **interpolation**. **Interpolation** derives a function from a set of discrete data points that passes through all the given data points. The function derived from interpolation depends on the interpolation methods used. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+In addition to estimate data points, interpolation is also used to approximate a complicated function by a simple function. The simple function can be obtained by making an interpolation from a few data points evaluated from the original function. Although this simple function have interpolation errors, depending on the problem domain and the interpolation method used, the gain in simplicity may be better than the loss in precision from errors.
+
+There are a lot of interpolation methods that can be used to estimate data points. When choosing an appropiate interpolation method for a problem, there are some things that need to be considered, like how accurate is the method, how expensive (complex) is it, how smooth is the interpolant, and how many data points are needed. In this article, the interpolation methods that will be discussed are the commonly used ones because of its simplicity, they are:
+- [Nearest-Neighbour Interpolation](#nearest-neighbour-interpolation)
+- [Polynomial Interpolation](#polynomial-interpolation)
+- [Linear Interpolation](#linear-interpolation)
+- [Spline Interpolation](#spline-interpolation)
+
+## Nearest-Neighbour Interpolation
+
+**Nearest-neighbour interpolation** (also known as **proximal interpolation**) is the simplest interpolation method. Rather than calculate an average value by some criteria or generate value based on complicated rules, this method locates/selects the value of the nearest data point and assign that value. Because this method only considers the nearest point it is also called **piecewise constant interpolation**. 
+
+Although this method is unlikely to be used in simple problems because there are other methods that are almost as simple to implement but overall better than this method, this method is a favourable choice over the other methods in high-dimensional multivariate interpolation (interpolation in functions that contain more than one variable) because of its speed and simplicity. This method is commonly used in real-time 3D rendering to select color values for a textured surface. 
+
+Another application of this method is to scale up an image in image processing. But there is a major drawback in using this method for image processing. It tends to generate images of poor quality.
+
+## Polynomial Interpolation
+
+## Linear Interpolation
+
+## Spline Interpolation
 
 ### Markdown
 
