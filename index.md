@@ -56,7 +56,7 @@ But, there is a problem in using polynomial interpolation. The problem is that t
 
 **Linear interpolation** is a special case of polynomial interpolation when the interpolation constructed is a polynomial of degree 1 (linear polynomial). To construct linear interpolation, we solve this equation
 
-![equation 1](images/polynomial_interpolation/equation_1.png)
+![equation 1](images/linear_interpolation/equation_1.png)
 
 using the given data points (only uses two data points). Interpolating a set of data points using linear interpolation can be done by concatenating the linear interpolant between each pair of data points. Linear interpolation is most accurate when the given pair of data points are close to one another in value, and when the correlation between _x_ and _y_ is approximately linear.
 
