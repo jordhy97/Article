@@ -1,5 +1,3 @@
-# Interpolation Methods
-
 ## What is Interpolation?
 
 Many times, especially in engineering and science, data is given only at discrete points and it is often required to estimate data points in-between the given discrete data points. The method to estimate or construct these new data points is called **interpolation**. **Interpolation** derives a function from a set of discrete data points that passes through all the given data points. The function derived from interpolation depends on the interpolation methods used. 
@@ -56,39 +54,19 @@ But, there is a problem in using polynomial interpolation. The problem is that t
 
 ## Linear Interpolation
 
+**Linear interpolation** is a special case of polynomial interpolation when the interpolation constructed is a polynomial of degree 1 (linear polynomial). To construct linear interpolation, we solve this equation
+
+![equation 1](images/polynomial_interpolation/equation_1.png)
+
+using the given data points (only uses two data points). Interpolating a set of data points using linear interpolation can be done by concatenating the linear interpolant between each pair of data points. Linear interpolation is most accurate when the given pair of data points are close to one another in value, and when the correlation between _x_ and _y_ is approximately linear.
+
+| <img src="images/linear_interpolation/linear_interpolation.png" width = "425" alt = "linear interpolation"/> |
+| --- |
+| Linear interpolation (blue line) between two points. [7] |
+
+Linear interpolation is often used to approximate a value of a function using two known values of that function at other data points. Linear interpolation is also often used to fill the gaps in a table, for example in statistics table, like chi-squared table, or t-distribution table where not all values for a given parameters are available in the table. By using linear interpolation, we can estimate the value that is not in the table in an easy way. Linear interpolation is commonly used in computer graphics, too. In computer graphics, linear interpolation is often called a **lerp**.
+
 ## Spline Interpolation
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jordhy97/Article/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
 ## References
 [1] https://en.wikipedia.org/w/index.php?title=Nearest-neighbor_interpolation. Accessed on 25th May 2017, 15.00 WIB. <br>
@@ -96,3 +74,5 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 [3] https://en.wikipedia.org/wiki/Polynomial_interpolation. Accessed on 25th May 2017, 17.30 WIB. <br>
 [4] http://whatis.techtarget.com/definition/polynomial-interpolation. Accessed on 25th May 2017, 17.35 WIB. <br>
 [5] w3.gazi.edu.tr/~balbasi/mws_gen_inp_txt_direct.pdf. Accessed on 25th May 2017, 17.50 WIB. <br>
+[6] http://www.et.byu.edu/~rowley/ChEn273/Topics/Stream_Variables/Manipulating_Stream_Variables/Interpolation_Unknown_Model.htm. Accessed on 25th May 2017, 19.00 WIB. <br>
+[7] https://en.wikipedia.org/wiki/Linear_interpolation. Accessed on 26th May 2017, 08.00 WIB. <br>
