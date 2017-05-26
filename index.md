@@ -60,7 +60,7 @@ But, there is a problem in using polynomial interpolation. The problem is that t
 
 using the given data points (only uses two data points). Interpolating a set of data points using linear interpolation can be done by concatenating the linear interpolant between each pair of data points. Linear interpolation is most accurate when the given pair of data points are close to one another in value, and when the correlation between _x_ and _y_ is approximately linear.
 
-| <img src="images/linear_interpolation/linear_interpolation.png" width = "425" alt = "linear interpolation"/> |
+| <img src="images/linear_interpolation/linear_interpolation.png" alt = "linear interpolation"/> |
 | --- |
 | Linear interpolation (blue line) between two points. [7] |
 
