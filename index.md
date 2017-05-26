@@ -68,6 +68,18 @@ Linear interpolation is often used to approximate a value of a function using tw
 
 ## Spline Interpolation
 
+**Spline interpolation** is an interpolation method where the interpolant is a piecewise polynomial called a spline. Spline function consists of polynomial pieces on subintervals joined together with certain continuity conditions. Suppose a spline function _S_  of degree _k_ having data points (knots) _x<sub>0</sub>, x<sub>1</sub>, ..., x<sub>n</sub>_ then these conditions must apply to _S_.
+- On each interval [_x<sub>i-1</sub>, x<sub>i</sub>_], _S(x)_ is a polynomial of degree at most _k_.
+- _S(x)_ has continuous _(k-1)_ derivative on [x<sub>0</sub>, x<sub>n</sub>_]. 
+
+| <img src="images/spline_interpolation/spline_interpolation.png" alt = "spline interpolation"/> |
+| --- |
+| Spline interpolation (cubic splines). [8] |
+
+To construct the spline interpolation of given data points, first, we decide the degree of the polynomial that is going to be used to interpolate the data points. After that, for every pairs of interval in the given data points, solve the polynomial equation that goes through those data points. Solving the equation can be done by making a system of equations consists of the polynomial equations and the condition that must be applied to the derivative of the polynomial equation (must be continuous) using the given data points. 
+
+Spline interpolation is often preffered to polynomial interpolation because its result is similar to polynomial interpolation with high degree while avoiding the problem of Runge's phenomenon where oscillation can occur between points when interpolating using high degree polynomials. Spline interpolation is often used in computer graphics because of the simplicity of its construction, accuracy of evaluation, and its capacity to approximate complex shapes through curve fitting. The most commonly used spline is cubic spline (spline of degree 3) because of the smoothness of the curve that it creates.
+
 ## References
 [1] https://en.wikipedia.org/w/index.php?title=Nearest-neighbor_interpolation. Accessed on 25th May 2017, 15.00 WIB. <br>
 [2] https://www.giassa.net/?page_id=207. Accessed on 25th May 2017, 15.30 WIB. <br>
@@ -76,3 +88,4 @@ Linear interpolation is often used to approximate a value of a function using tw
 [5] w3.gazi.edu.tr/~balbasi/mws_gen_inp_txt_direct.pdf. Accessed on 25th May 2017, 17.50 WIB. <br>
 [6] http://www.et.byu.edu/~rowley/ChEn273/Topics/Stream_Variables/Manipulating_Stream_Variables/Interpolation_Unknown_Model.htm. Accessed on 25th May 2017, 19.00 WIB. <br>
 [7] https://en.wikipedia.org/wiki/Linear_interpolation. Accessed on 26th May 2017, 08.00 WIB. <br>
+[8] http://www.cs.clemson.edu/~dhouse/courses/405/notes/splines.pdf. Accessed on 26th May 2017, 11.00 WIB.
