@@ -69,8 +69,8 @@ Linear interpolation is often used to approximate a value of a function using tw
 ## Spline Interpolation
 
 **Spline interpolation** is an interpolation method where the interpolant is a piecewise polynomial called a spline. Spline function consists of polynomial pieces on subintervals joined together with certain continuity conditions. Suppose a spline function _S_  of degree _k_ having data points (knots) _x<sub>0</sub> , x<sub>1</sub> , ... , x<sub>n</sub>_ then these conditions must apply to _S_.
-- On each interval [_x<sub>i-1</sub>, x<sub>i</sub>_], _S(x)_ is a polynomial of degree at most _k_.
-- _S(x)_ has continuous _(k-1)_ derivative on [_x<sub>0</sub> , x<sub>n</sub>_]. 
+- On each interval [ _x<sub>i-1</sub>, x<sub>i</sub>_ ], _S(x)_ is a polynomial of degree at most _k_.
+- _S(x)_ has continuous _(k-1)_ derivative on [ _x<sub>0</sub> , x<sub>n</sub>_ ]. 
 
 | <img src="images/spline_interpolation/spline_interpolation.png" alt = "spline interpolation"/> |
 | --- |
